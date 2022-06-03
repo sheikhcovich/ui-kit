@@ -1,0 +1,88 @@
+.inputWrapper {
+  width: fit-content;
+  position: relative;
+}
+.inputWrapper.fullWidth {
+  width: 100%;
+}
+.inputWrapper label {
+  color: rgb(114, 111, 111);
+  display: block;
+  position: absolute;
+  z-index: 0;
+  cursor: text;
+  transition: 0.3s;
+}
+label.standard {
+  bottom: 1%;
+  left: 0;
+}
+label.filled {
+  bottom: 40%;
+  left: 15px;
+  padding: 0;
+}
+.standard {
+  padding: 20px 0 5px;
+  font-size: 17px;
+  transition: 0.1s;
+  border: none;
+  display: block;
+  outline: 0;
+  border-radius: 4px;
+  z-index: 100000;
+  width: 100%;
+  background-color: transparent;
+}
+
+.filled {
+  background-color: whitesmoke;
+  padding: 15px 13px 1px;
+}
+.inputWrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scale(0);
+  border-bottom: 2px solid blue;
+  width: 100%;
+  transition: 0.2s;
+}
+.inputWrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid rgb(117, 115, 115);
+}
+.inputWrapper:hover::before {
+  border-bottom: 2px solid rgb(5, 5, 5);
+}
+.inputWrapper:focus-within::after {
+  transform: scale(1);
+}
+.inputWrapper:focus-within::before {
+  transform: scale(0);
+}
+.inputWrapper:focus-within label {
+  color: blue;
+  font-size: 12px;
+  bottom: 80%;
+}
+.inputWrapper:focus-within label.standard {
+  bottom: 60%;
+}
+.inputWrapper:focus-within label.filled {
+  bottom: 72%;
+}
+.standard:not(:placeholder-shown) + label.standard {
+  font-size: 12px;
+  bottom: 60%;
+}
+.standard:not(:placeholder-shown) + label.filled {
+  font-size: 12px;
+  bottom: 72%;
+}

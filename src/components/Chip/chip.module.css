@@ -1,0 +1,62 @@
+.chip {
+  padding: 7px;
+  font-size: 13px;
+  border-radius: 32px;
+  color: rgb(59, 58, 58);
+  display: inline-flex;
+  gap: 5px;
+}
+.filled {
+  background-color: rgb(243, 242, 242);
+}
+.filled.primary {
+  background-color: blue;
+  color: white;
+}
+.filled.success {
+  background-color: green;
+  color: white;
+}
+.outlined {
+  background-color: transparent;
+  border: 1px solid rgb(192, 192, 192);
+}
+.outlined.primary {
+  border: 1px solid blue;
+  color: blue;
+}
+.outlined.success {
+  border: 1px solid green;
+  color: green;
+}
+.close {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background-color: rgb(207, 204, 204);
+  padding: 3px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.close:hover {
+  background-color: darkgray;
+}
+.close::before,
+.close::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 70%;
+  top: 45%;
+  left: 14%;
+  background: rgb(255, 255, 255);
+}
+.close::before {
+  transform: rotate(45deg);
+}
+.close::after {
+  transform: rotate(-45deg);
+}

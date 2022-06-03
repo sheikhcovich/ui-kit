@@ -1,0 +1,26 @@
+.tooltip-wrapper {
+  height: auto;
+  width: fit-content;
+  position: relative;
+}
+
+.tooltip-wrapper .tooltip {
+  z-index: 10000000;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  color: white;
+  padding: 4px;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 4px;
+  font-size: 14px;
+  opacity: 0;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.tooltip-wrapper:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 1s;
+}

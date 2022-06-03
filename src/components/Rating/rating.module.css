@@ -1,0 +1,35 @@
+.ratingContainer {
+  width: fit-content;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.polygon {
+  transition: transform 0.2s;
+  fill-rule: "nonzero";
+}
+
+.orangePolygon {
+  fill: orange;
+}
+.lightgreyPolygon {
+  fill: lightgray;
+}
+svg[id="spanIcon"]:hover polygon {
+  transform: scale(1.05) !important;
+}
+span[id="rating"]:hover polygon {
+  fill: orange !important;
+}
+svg[id="spanIcon"]:hover ~ svg[id="spanIcon"] polygon {
+  fill: lightgray !important;
+}
+.svg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.pointer {
+  cursor: pointer;
+}

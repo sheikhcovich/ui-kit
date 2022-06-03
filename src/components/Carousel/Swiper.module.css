@@ -1,0 +1,57 @@
+.swiper {
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 14px;
+  border-radius: 5px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.swiperWrapper {
+  overflow: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+}
+.swiperContainer {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transition: 0.4s ease-in-out;
+  display: flex;
+  gap: 5px;
+  width: 100%;
+  position: relative;
+}
+.buttonWrapper {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+}
+.buttonWrapper:hover {
+  opacity: 0.8;
+}
+.leftButtonWrapper {
+  display: none;
+}
+.button {
+  outline: none;
+  border: none;
+  padding: 5px;
+  background-color: rgba(68, 68, 68, 0.4);
+  width: 40px;
+  height: 100%;
+  font-size: 35px;
+  cursor: pointer;
+  z-index: 100000000;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}

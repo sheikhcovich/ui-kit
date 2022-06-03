@@ -1,0 +1,14 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1233;
+}
+.backdropWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
